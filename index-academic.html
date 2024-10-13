@@ -11,6 +11,10 @@
         margin: 0;
         padding: 0;
         background-color: #f9f9f9;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
       }
 
       header {
@@ -504,4 +508,15 @@
       <p>&copy; 2024 Nikolaos Zafeiropoulos. All rights reserved.</p>
     </footer>
   </body>
+  <script>
+    // Disable right-click
+    document.addEventListener('contextmenu', event => event.preventDefault());
+  
+    // Disable keyboard shortcuts (Ctrl+C, Ctrl+X, Ctrl+V)
+    document.addEventListener('keydown', function (e) {
+      if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'v')) {
+          e.preventDefault();
+      }
+    });
+  </script>
 </html>
